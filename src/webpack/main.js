@@ -7,7 +7,7 @@ window.addEventListener(
 
     const spritCanvas = new SplitCanvas();
 
-    spritCanvas.setImage('/img/dummy.jpeg').then(() => {
+    spritCanvas.setImage('img/dummy.jpeg').then(() => {
       const canvases = spritCanvas.getCanvases(5, 5);
       canvases.forEach(rowCanvases => {
         rowCanvases.forEach(canvas => {
