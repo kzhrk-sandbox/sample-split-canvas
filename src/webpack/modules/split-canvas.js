@@ -35,10 +35,8 @@ export default class SplitCanvas {
    * @param heightCount
    * @returns {Array}
    */
-  getCanvases(widthCount = 10, heightCount = 10) {
+  getCanvases(splitWidthCount = 10, splitHeightCount = 10) {
     const result = [];
-    const splitWidthCount = widthCount;
-    const splitHeightCount = heightCount;
     const canvasWidth = this.canvas.width / splitWidthCount;
     const canvasHeight = this.canvas.height / splitHeightCount;
 
@@ -56,12 +54,12 @@ export default class SplitCanvas {
           this.canvas,
           canvasWidth * wi,
           canvasHeight * hi,
-          canvasWidth * (wi + 1),
-          canvasHeight * (hi + 1),
+          canvasWidth,
+          canvasHeight,
           0,
           0,
-          canvasWidth * (wi + 1),
-          canvasHeight * (hi + 1)
+          canvasWidth,
+          canvasHeight
         );
 
         rowCanvases.push(canvas);

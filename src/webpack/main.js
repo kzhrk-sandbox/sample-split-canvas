@@ -5,10 +5,10 @@ window.addEventListener(
   () => {
     const app = document.getElementById('app');
 
-    const spritCanvas = new SplitCanvas();
+    const splitCanvas = new SplitCanvas();
 
-    spritCanvas.setImage('img/dummy.jpeg').then(() => {
-      const canvases = spritCanvas.getCanvases(5, 5);
+    splitCanvas.setImage('img/dummy.jpeg').then(() => {
+      const canvases = splitCanvas.getCanvases(10, 10);
       canvases.forEach(rowCanvases => {
         rowCanvases.forEach(canvas => {
           app.appendChild(canvas);
@@ -18,7 +18,7 @@ window.addEventListener(
         app.appendChild(brNode);
       });
 
-      app.appendChild(spritCanvas.canvas);
+      app.appendChild(splitCanvas.canvas);
     });
   },
   false
